@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makmur Abadi Transport | Jasa Pengiriman Barang Seluruh Nusantara</title>
+    <meta name="description" content="Jasa pengiriman barang Indonesia, sewa truk wingbox, logistik makmur abadi. Didukung 1.000+ armada tangguh siap kirim ke seluruh pelosok Nusantara.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.7) 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        /* Navbar behavior: transparent initially, hidden on scroll down, visible on scroll up */
+        nav {
+            transition: transform 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+        }
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom-width: 1px;
+            border-color: rgb(226, 232, 240);
+        }
+        /* Smooth scale for mobile menu */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            transform-origin: top;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 bg-transparent border-transparent text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="./images/logo_makmur_abadi.png" alt="Logo Makmur Abadi" class="h-12 w-auto">
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#beranda" class="text-sm font-semibold hover:text-blue-500 transition nav-link">Beranda</a>
+                    <a href="#tentang" class="text-sm font-semibold hover:text-blue-500 transition nav-link">Tentang Kami</a>
+                    <a href="#keunggulan" class="text-sm font-semibold hover:text-blue-500 transition nav-link">Keunggulan</a>
+                    <a href="#armada" class="text-sm font-semibold hover:text-blue-500 transition nav-link">Armada</a>
+                    <a href="#penawaran" class="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-md shadow-blue-200/50">Minta Penawaran</a>
+                </div>
+                <button class="lg:hidden p-2 rounded-lg" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white text-slate-900 border-b border-slate-200 px-4 py-6 space-y-4 shadow-xl">
+            <a href="#beranda" class="block text-base font-semibold px-4 py-2 hover:bg-slate-50 rounded-lg">Beranda</a>
+            <a href="#tentang" class="block text-base font-semibold px-4 py-2 hover:bg-slate-50 rounded-lg">Tentang Kami</a>
+            <a href="#keunggulan" class="block text-base font-semibold px-4 py-2 hover:bg-slate-50 rounded-lg">Keunggulan</a>
+            <a href="#armada" class="block text-base font-semibold px-4 py-2 hover:bg-slate-50 rounded-lg">Armada</a>
+            <div class="pt-4">
+                <a href="#penawaran" class="block bg-blue-600 text-white px-4 py-3 rounded-xl text-center font-bold shadow-md shadow-blue-200/50">Minta Penawaran</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-screen flex items-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="./images/scania_mat.jpeg" alt="Logistik Indonesia" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl ml-16 px-4 sm:px-6 lg:px-8 py-20 text-white">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider mb-6">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i> Solusi Logistik Nasional
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Kirim Barang Tanpa Batas ke Seluruh <span class="text-blue-500">Nusantara.</span>
+                </h1>
+                <p class="text-base md:text-lg text-slate-300 mb-10 leading-relaxed">
+                    Didukung oleh 1.000+ armada tangguh, Makmur Abadi Transport siap mengantar amanah Anda dengan tepat waktu dan profesional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#penawaran" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl shadow-blue-900/20">
+                        Minta Penawaran Sekarang <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h2 class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">Tentang Kami</h2>
+                    <h3 class="text-4xl font-extrabold text-slate-900 mb-6">Sejarah & Dedikasi Kami</h3>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                        Sejak resmi berdiri pada tahun 2020, Makmur Abadi Transport terus berinovasi untuk memenuhi standar logistik kelas dunia. Kami memahami bahwa distribusi yang efisien adalah kunci sukses setiap industri. 
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-10">
+                        Oleh karena itu, kami melakukan ekspansi armada secara masif hingga mencapai angka 1.000 unit truk untuk menjamin ketersediaan unit bagi mitra kami. Dengan jangkauan pengiriman seluruh Indonesia, kami bangga menjadi mitra strategis yang tumbuh bersama Anda sejak hari pertama kami berdiri.
+                    </p>
+                    
+                    <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                        <h4 class="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                            <i data-lucide="star" class="w-6 h-6 text-blue-600 fill-blue-600"></i> Nilai Inti Kami (AKTIF)
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">A</span>
+                                <span class="font-semibold text-slate-700">Adaptasi diri</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">K</span>
+                                <span class="font-semibold text-slate-700">Kerja sama</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">T</span>
+                                <span class="font-semibold text-slate-700">Tangguh</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">I</span>
+                                <span class="font-semibold text-slate-700">Integritas</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">F</span>
+                                <span class="font-semibold text-slate-700">Fokus pada pelanggan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-10">
+                    <div class="relative">
+                        <div class="absolute -left-4 top-0 w-1 bg-blue-600 h-full rounded-full"></div>
+                        <div class="pl-8">
+                            <h4 class="text-2xl font-extrabold text-slate-900 mb-4">Visi Kami</h4>
+                            <p class="text-slate-600 leading-relaxed italic">
+                                "Perusahaan transportasi yang terpadu dengan tujuan melayani kebutuhan logistik pelanggan kami dan menyediakan pelayanan terbaik untuk para pelanggan."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-4 top-0 w-1 bg-slate-300 h-full rounded-full"></div>
+                        <div class="pl-8">
+                            <h4 class="text-2xl font-extrabold text-slate-900 mb-4">Misi Kami</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-blue-600 mt-1 flex-shrink-0"></i>
+                                    <span class="text-slate-700">Mengatasi masalah logistik pelanggan kami.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-blue-600 mt-1 flex-shrink-0"></i>
+                                    <span class="text-slate-700">Mempertahankan posisi kami sebagai pemimpin pasar di industri transportasi.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-blue-600 mt-1 flex-shrink-0"></i>
+                                    <span class="text-slate-700">Menjadi perusahaan yang memiliki reputasi baik dan terkenal.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-blue-600 mt-1 flex-shrink-0"></i>
+                                    <span class="text-slate-700">Memperkaya pengalaman kami di dunia transportasi.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section id="keunggulan" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">Keunggulan</h2>
+                <p class="text-4xl font-extrabold text-slate-900">Kenapa Bermitra Dengan Kami?</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="map" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Jangkauan Luas</h4>
+                    <p class="text-slate-600">Seluruh wilayah Indonesia (Sabang sampai Merauke) siap kami layani.</p>
+                </div>
+                <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Keamanan Terjamin</h4>
+                    <p class="text-slate-600">Jaminan asuransi barang dan sistem pelacakan (tracking) untuk setiap pengiriman.</p>
+                </div>
+                <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm card-hover">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="database" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">1.000 Unit Armada</h4>
+                    <p class="text-slate-600">Kapasitas armada besar menjamin ketersediaan unit kapanpun Anda butuhkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Armada Gallery -->
+    <section id="armada" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">The Fleet</h2>
+                <p class="text-4xl font-extrabold text-slate-900">Armada Kami</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Light -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col group hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <div class="mb-6 h-40 bg-slate-200 rounded-2xl overflow-hidden flex items-center justify-center group-hover:bg-blue-500">
+                        <img src="./images/truk-light.jpeg" alt="Truk Light" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-6 flex items-center justify-between">
+                        Light
+                        <i data-lucide="truck" class="w-6 h-6 opacity-40"></i>
+                    </h4>
+                    <div class="mb-6">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Daya Muat</p>
+                        <p class="text-lg font-extrabold">20.000 – 25.000 Kg</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-slate-200 group-hover:border-blue-400">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Angkutan</p>
+                        <p class="text-sm font-medium leading-relaxed">Besi & baja, semen, kayu, material konstruksi, produk berat non curah.</p>
+                    </div>
+                </div>
+
+                <!-- Medium -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col group hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <div class="mb-6 h-40 bg-slate-200 rounded-2xl overflow-hidden flex items-center justify-center group-hover:bg-blue-500">
+                        <img src="./images/truk-medium.jpeg" alt="Truk Medium" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-6 flex items-center justify-between">
+                        Medium
+                        <i data-lucide="truck" class="w-6 h-6 opacity-40"></i>
+                    </h4>
+                    <div class="mb-6">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Daya Muat</p>
+                        <p class="text-lg font-extrabold">35.000 – 45.000 Kg</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-slate-200 group-hover:border-blue-400">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Angkutan</p>
+                        <p class="text-sm font-medium leading-relaxed">Besi & baja, semen, kayu, material konstruksi, produk berat non curah.</p>
+                    </div>
+                </div>
+
+                <!-- Heavy -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col group hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <div class="mb-6 h-40 bg-slate-200 rounded-2xl overflow-hidden flex items-center justify-center group-hover:bg-blue-500">
+                        <img src="./images/truk-heavy.jpeg" alt="Truk Heavy" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-6 flex items-center justify-between">
+                        Heavy
+                        <i data-lucide="truck" class="w-6 h-6 opacity-40"></i>
+                    </h4>
+                    <div class="mb-6">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Daya Muat</p>
+                        <p class="text-lg font-extrabold">55.000 – 65.000 Kg</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-slate-200 group-hover:border-blue-400">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Angkutan</p>
+                        <p class="text-sm font-medium leading-relaxed">Besi & baja, semen, kayu, material konstruksi, produk berat non curah.</p>
+                    </div>
+                </div>
+
+                <!-- Wingbox -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 flex flex-col group hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <div class="mb-6 h-40 bg-slate-200 rounded-2xl overflow-hidden flex items-center justify-center group-hover:bg-blue-500">
+                        <img src="./images/truk-wingbox.jpeg" alt="Truk Wingbox" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-6 flex items-center justify-between">
+                        Wingbox
+                        <i data-lucide="package" class="w-6 h-6 opacity-40"></i>
+                    </h4>
+                    <div class="mb-6">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">Daya Muat</p>
+                        <p class="text-lg font-extrabold">25.000 Kg</p>
+                    </div>
+                    <div class="mt-auto pt-6 border-t border-slate-200 group-hover:border-blue-400">
+                        <p class="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Angkutan</p>
+                        <p class="text-sm font-medium leading-relaxed">Bahan makanan/retail, gula, garam, kertas, biji plastik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Generation Form -->
+    <section id="penawaran" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-[3rem] p-8 md:p-16 flex flex-col lg:flex-row gap-12 items-center overflow-hidden relative">
+                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+                <div class="lg:w-1/2 text-white relative z-10">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Minta Penawaran</h2>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">Dapatkan solusi logistik terbaik dengan tarif kompetitif. Tim kami akan menghubungi Anda sesegera mungkin.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="check-circle" class="text-blue-500"></i>
+                            <span>Estimasi harga dalam 30 menit</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="check-circle" class="text-blue-500"></i>
+                            <span>Konsultasi rute pengiriman gratis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 w-full relative z-10">
+                    <div class="bg-white p-8 rounded-3xl shadow-2xl">
+                        <form id="quoteForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" id="name" placeholder="Nama/Perusahaan" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-600" required>
+                                <input type="tel" id="whatsapp" placeholder="WhatsApp (08xx)" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-600" required>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <input type="text" id="origin" placeholder="Kota Asal" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-600" required>
+                                <input type="text" id="destination" placeholder="Kota Tujuan" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-600" required>
+                            </div>
+                            <textarea id="details" rows="3" placeholder="Jenis Barang & Estimasi Berat" class="w-full px-4 py-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                                Kirim Permintaan <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="./images/logo_makmur_abadi.png" alt="Logo Makmur Abadi" class="h-10 w-auto">
+                    </div>
+                    <p class="text-slate-400 text-sm">Solusi logistik terpercaya untuk kebutuhan pengiriman Anda di seluruh Indonesia.</p>
+                </div>
+
+                <!-- Kontak Kami -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5 text-blue-500"></i>
+                        Kontak Kami
+                    </h4>
+                    <div class="space-y-4 text-sm text-slate-400">
+                        <div>
+                            <p class="font-semibold text-white mb-2">Kantor Pusat</p>
+                            <p>Jl. Lkr. Utara Umk No.7, Bacin,<br>Pedawang, Kec. Bae,<br>Kabupaten Kudus, Jawa Tengah 59327</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white mb-1">Telp</p>
+                            <p><a href="tel:+6202467894101" class="hover:text-blue-400 transition">(024) 678941018</a></p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-white mb-1">Email</p>
+                            <p><a href="mailto:makmur@magroup.net" class="hover:text-blue-400 transition">makmur@magroup.net</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sosial Media -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="share-2" class="w-5 h-5 text-blue-500"></i>
+                        Sosial Media
+                    </h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition shadow-sm" title="Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition shadow-sm" title="Twitter">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition shadow-sm" title="Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition shadow-sm" title="YouTube">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition shadow-sm" title="LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Lokasi Kami -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-lg font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-blue-500"></i>
+                        Lokasi Kami
+                    </h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Pusat Kudus, Palembang, Lampung, Cilegon, Jakarta, Bandung, Semarang, Tuban, Surabaya
+                    </p>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-slate-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-slate-400">
+                        &copy; 2024 Makmur Abadi Transport. Hak Cipta Dilindungi.
+                    </p>
+                    <div class="flex gap-6 text-sm text-slate-400">
+                        <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-blue-400 transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Logic
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBtn = document.getElementById('mobile-menu-btn');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Background change logic (Transparent to Scrolled)
+            if (scrollTop > 50) {
+                navbar.classList.add('nav-scrolled', 'text-slate-900');
+                navbar.classList.remove('text-white');
+            } else {
+                navbar.classList.remove('nav-scrolled', 'text-slate-900');
+                navbar.classList.add('text-white');
+            }
+
+            // Hide/Show logic on scroll
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                // Scrolling down - hide navbar
+                navbar.classList.add('nav-hidden');
+                mobileMenu.classList.add('hidden'); // Close menu if scrolling down
+            } else {
+                // Scrolling up - show navbar
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollTop = Math.max(0, scrollTop);
+        });
+
+        // Mobile Menu Toggle
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside or on a link
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Logic
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const wa = document.getElementById('whatsapp').value;
+            const origin = document.getElementById('origin').value;
+            const dest = document.getElementById('destination').value;
+            const details = document.getElementById('details').value;
+            
+            const message = `Halo Makmur Abadi Transport,\n\nSaya ingin meminta penawaran pengiriman:\n*Nama:* ${name}\n*WA:* ${wa}\n*Asal:* ${origin}\n*Tujuan:* ${dest}\n*Detail:* ${details}`;
+            
+            // Note: In real production, use the actual company number
+            window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(message)}`, '_blank');
+        });
+    </script>
+</body>
+</html>
