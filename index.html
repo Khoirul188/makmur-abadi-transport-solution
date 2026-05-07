@@ -38,6 +38,14 @@
             transition: all 0.3s ease-in-out;
             transform-origin: top;
         }
+        /* Mobile menu button styling */
+        #mobile-menu-btn {
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        #mobile-menu-btn.menu-open {
+            background-color: transparent;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -62,7 +70,7 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-transparent text-white border-b border-transparent px-3 sm:px-4 py-4 sm:py-6 space-y-2 sm:space-y-4">
+        <div id="mobile-menu" class="hidden lg:hidden bg-black/90 text-white border-b border-slate-700 px-3 sm:px-4 py-4 sm:py-6 space-y-2 sm:space-y-4">
             <a href="#beranda" class="block text-sm sm:text-base font-semibold px-3 py-2 hover:bg-white/10 rounded-lg transition">Beranda</a>
             <a href="#tentang" class="block text-sm sm:text-base font-semibold px-3 py-2 hover:bg-white/10 rounded-lg transition">Tentang Kami</a>
             <a href="#keunggulan" class="block text-sm sm:text-base font-semibold px-3 py-2 hover:bg-white/10 rounded-lg transition">Keunggulan</a>
@@ -471,11 +479,13 @@
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
+            menuBtn.classList.toggle('menu-open');
         });
 
         // Close menu when clicking outside or on a link
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                menuBtn.classList.remove('menu-open');
                 mobileMenu.classList.add('hidden');
             }
         });
